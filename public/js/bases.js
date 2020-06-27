@@ -4,7 +4,7 @@ let Bases = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/bases?condominio=eq.' + condomino_id,
+                url: window.interact.endpoint + '/vlinteract/bases?condominio=eq.' + condomino_id,
                 dataType: 'json',
                 success: function (response) {
                     resolve(response);
@@ -24,7 +24,7 @@ let Bases = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/lista_bases?select=id,basedestinatarios&condominio=eq.' + condomino,
+                url: window.interact.endpoint + '/vlinteract/lista_bases?select=id,basedestinatarios&condominio=eq.' + condomino,
                 dataType: 'json',
                 success: function (response) {
                     let options = [];
@@ -48,7 +48,7 @@ let Bases = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: window.interact.endpoint + '/bases',
+                url: window.interact.endpoint + '/vlinteract/bases',
                 dataType: 'json',
                 headers: {
                     Prefer: 'resolution=merge-duplicates,return=representation',
@@ -73,7 +73,7 @@ let Bases = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'DELETE',
-                url: window.interact.endpoint + '/bases?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/bases?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -97,7 +97,7 @@ let Bases = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/bases?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/bases?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
