@@ -24,7 +24,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/lista_comunicados?select=id,assunto_datado&condominio=eq.' + condomino,
+                url: window.interact.endpoint + '/vlinteract/lista_comunicados?select=id,assunto_datado&condominio=eq.' + condomino,
                 dataType: 'json',
                 success: function (response) {
                     let options = [];
