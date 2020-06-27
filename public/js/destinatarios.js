@@ -4,7 +4,7 @@ let Destinatarios = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: window.interact.endpoint + '/destinatarios',
+                url: window.interact.endpoint + '/vlinteract/destinatarios',
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -29,7 +29,7 @@ let Destinatarios = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'PATCH',
-                url: window.interact.endpoint + '/destinatarios?id=eq.'+data.id,
+                url: window.interact.endpoint + '/vlinteract/destinatarios?id=eq.'+data.id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -54,7 +54,7 @@ let Destinatarios = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/destinatarios?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/destinatarios?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -78,7 +78,7 @@ let Destinatarios = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/destinatarios?base=eq.' + baseid,
+                url: window.interact.endpoint + '/vlinteract/destinatarios?base=eq.' + baseid,
                 dataType: 'json',
                 success: function (response) {
                     resolve(response);
@@ -98,7 +98,7 @@ let Destinatarios = function () {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'DELETE',
-                url: window.interact.endpoint + '/destinatarios?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/destinatarios?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
