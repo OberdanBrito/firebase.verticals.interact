@@ -1,65 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Verticals Interact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.15.5/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.15.5/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.15.5/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.15.5/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.15.5/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <script type="text/javascript" src="/vllibs/lib/jquery/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="/vllibs/lib/dhtmlx/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/b9786aa6c5.js" crossorigin="anonymous"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <link type="text/css" rel="stylesheet" href="/vllibs/lib/dhtmlx/skins/material/dhtmlx.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/app.css">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.css">
+    <link type="text/css" rel="stylesheet" href="/suite/vbar/vbar.css">
+
+    <link type="text/css" rel="stylesheet" href="/suite/vbar/vbar.css">
+
+    <script type="text/javascript" src="/vlogin/js/oauth.js"></script>
+    <script type="text/javascript" src="/vllibs/adm/adm.js"></script>
+    <script type="text/javascript" src="/vllibs/adm/conexoes"></script>
+    <script type="text/javascript" src="/vllibs/adm/anexos.js"></script>
+
+</head>
+<body>
+<div id="container_vbar"></div>
+<div id="container_app"></div>
+</body>
+
+<script type="text/javascript" src="/suite/vbar/vbar.js"></script>
+
+<script type="text/javascript" src="js/bases.js"></script>
+<script type="text/javascript" src="js/destinatarios.js"></script>
+<script type="text/javascript" src="js/campos.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/envio.js"></script>
+<script type="text/javascript" src="js/correspondentes.js"></script>
+<script type="text/javascript" src="js/comunicados.js"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
+<script type="text/javascript" src="js/editor.js"></script>
+<script type="text/javascript" src="js/postagem.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script>
+
+    window.interact = {
+        endpoint: '/vlinteract',
+        anexos: '/vllibs/ws/upload/',
+        anexosimg: '/interact/img/anexo.png',
+        autohyperlink: '/vllibs/ws/?f=',
+        webservice: '/vllibs/ws/email/',
+    };
+
+    window.adm = {
+        endpoint: '/vladm',
+        configendpoint: '/vlconfig',
+        finalizacadastro: 'suite/condominio/finalizar-cadastro.html',
+    };
+
+    window.login = {
+        start: '',
+        endpoint: '/oauth',
+        form: '/vlogin/?a=l&c=interact',
+        avatar: 'https://ui-avatars.com/api/?name=',
+    };
+
+    if (!sessionStorage.user) {
+        new VerticalsOauth().avaliaAcesso();
+    } else {
+        new App().Start();
+    }
+
+</script>
 </html>
