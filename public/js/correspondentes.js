@@ -4,7 +4,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/correspondentes?condominio=eq.' + condomino_id,
+                url: window.interact.endpoint + '/vlinteract/correspondentes?condominio=eq.' + condomino_id,
                 dataType: 'json',
                 success: function (response) {
                     resolve(response);
@@ -24,7 +24,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/correspondentes?select=id,endereco&condominio=eq.' + condomino,
+                url: window.interact.endpoint + '/vlinteract/correspondentes?select=id,endereco&condominio=eq.' + condomino,
                 dataType: 'json',
                 success: function (response) {
                     let options = [];
@@ -48,7 +48,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/correspondentes?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/correspondentes?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -72,7 +72,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: window.interact.endpoint + '/correspondentes?select=id',
+                url: window.interact.endpoint + '/vlinteract/correspondentes?select=id',
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -97,7 +97,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: window.interact.endpoint + '/correspondentes',
+                url: window.interact.endpoint + '/vlinteract/correspondentes',
                 dataType: 'json',
                 headers: {
                     Prefer: 'resolution=merge-duplicates,return=representation',
@@ -115,7 +115,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'PATCH',
-                url: window.interact.endpoint + '/correspondentes?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/correspondentes?id=eq.' + id,
                 dataType: 'json',
                 success: function (response) {
                     resolve(response);
@@ -136,7 +136,7 @@ class Correspondentes {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'DELETE',
-                url: window.interact.endpoint + '/correspondentes?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/correspondentes?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
