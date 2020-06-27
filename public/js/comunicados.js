@@ -4,7 +4,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/lista_comunicados',
+                url: window.interact.endpoint + '/vlinteract/lista_comunicados',
                 dataType: 'json',
                 success: function (response) {
                     resolve(response);
@@ -48,7 +48,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: window.interact.endpoint + '/rpc/gen_random_uuid',
+                url: window.interact.endpoint + '/vlinteract/rpc/gen_random_uuid',
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -72,7 +72,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/comunicados?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/comunicados?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
