@@ -96,7 +96,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'GET',
-                url: window.interact.endpoint + '/comunicados?id=eq.' + id + '&select=resumo',
+                url: window.interact.endpoint + '/vlinteract/comunicados?id=eq.' + id + '&select=resumo',
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -120,7 +120,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: window.interact.endpoint + '/comunicados',
+                url: window.interact.endpoint + '/vlinteract/comunicados',
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -145,7 +145,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'PATCH',
-                url: window.interact.endpoint + '/comunicados?id=eq.'+this.data.id,
+                url: window.interact.endpoint + '/vlinteract/comunicados?id=eq.'+this.data.id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -170,7 +170,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'DELETE',
-                url: window.interact.endpoint + '/comunicados?id=eq.' + id,
+                url: window.interact.endpoint + '/vlinteract/comunicados?id=eq.' + id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -195,7 +195,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'PATCH',
-                url: window.interact.endpoint + '/comunicados?id=eq.'+ id,
+                url: window.interact.endpoint + '/vlinteract/comunicados?id=eq.'+ id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',
@@ -222,7 +222,7 @@ class Comunicados {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'PATCH',
-                url: window.interact.endpoint + '/comunicados?id=eq.'+ id,
+                url: window.interact.endpoint + '/vlinteract/comunicados?id=eq.'+ id,
                 dataType: 'json',
                 headers: {
                     Prefer: 'return=representation',

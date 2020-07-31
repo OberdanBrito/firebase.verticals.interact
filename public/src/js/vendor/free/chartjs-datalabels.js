@@ -33,7 +33,7 @@ var devicePixelRatio = (function() {
 }());
 
 var utils = {
-	// @todo move this in Chart.helpers.toTextLines
+	//  move this in Chart.helpers.toTextLines
 	toTextLines: function(inputs) {
 		var lines = [];
 		var input;
@@ -53,7 +53,7 @@ var utils = {
 		return lines;
 	},
 
-	// @todo move this method in Chart.helpers.canvas.toFont (deprecates helpers.fontString)
+	//  move this method in Chart.helpers.canvas.toFont (deprecates helpers.fontString)
 	// @see https://developer.mozilla.org/en-US/docs/Web/CSS/font
 	toFontString: function(font) {
 		if (!font || helpers.isNullOrUndef(font.size) || helpers.isNullOrUndef(font.family)) {
@@ -66,8 +66,8 @@ var utils = {
 			+ font.family;
 	},
 
-	// @todo move this in Chart.helpers.canvas.textSize
-	// @todo cache calls of measureText if font doesn't change?!
+	//  move this in Chart.helpers.canvas.textSize
+	//  cache calls of measureText if font doesn't change?!
 	textSize: function(ctx, lines, font) {
 		var items = [].concat(lines);
 		var ilen = items.length;
@@ -89,7 +89,7 @@ var utils = {
 		};
 	},
 
-	// @todo move this method in Chart.helpers.options.toFont
+	//  move this method in Chart.helpers.options.toFont
 	parseFont: function(value) {
 		var global = Chart.defaults.global;
 		var size = helpers.valueOrDefault(value.size, global.defaultFontSize);
@@ -108,7 +108,7 @@ var utils = {
 
 	/**
 	 * Returns value bounded by min and max. This is equivalent to max(min, min(value, max)).
-	 * @todo move this method in Chart.helpers.bound
+	 *  move this method in Chart.helpers.bound
 	 * https://doc.qt.io/qt-5/qtglobal.html#qBound
 	 */
 	bound: function(min, value, max) {
